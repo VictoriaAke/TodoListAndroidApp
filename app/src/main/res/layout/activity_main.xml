@@ -30,7 +30,7 @@
         android:textColor="#000"
         style="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
-      />
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,38 +44,87 @@
         android:textStyle="normal"
         />
 
-    <EditText
+    <!--    <EditText-->
+    <!--       -->
+
+
+
+    <!--    </EditText>-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textColorHint="#000"
-        android:hint="@string/email"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#63C4C4C4"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:background="#C4C4C4"
-        android:padding="10dp"
-        android:textSize="14sp"
-        android:layout_marginTop="30dp">
+        >
 
 
 
-    </EditText>
+        <com.google.android.material.textfield.TextInputLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/etEmailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="false"
+            android:textColorHint="#000"
+            android:layout_marginTop="10dp"
+            >
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textColorHint="#000"
-        android:hint="@string/password"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="#C4C4C4"
-        android:textSize="14sp"
-        android:firstBaselineToTopHeight="0dp"
-        android:padding="10dp"
-        android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/email"
+                android:textColor="#000"
+                android:inputType="textEmailAddress"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 
-    </EditText>
+
+        <com.google.android.material.textfield.TextInputLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="#000"
+            app:passwordToggleTint="@color/mainBlack"
+            android:layout_marginTop="0sp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="#000"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
